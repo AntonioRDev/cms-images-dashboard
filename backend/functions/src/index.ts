@@ -1,24 +1,18 @@
 import * as functions from 'firebase-functions';
 import express = require("express");
 import cors = require("cors");
+import routes from "./routes";
+import morgan from "morgan";
+const fileParser = require('express-multipart-file-parser')
 
 const app = express();
 
-const users = [{
-    id: 1,
-    name: "Test"
-}];
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false}));
+app.use(fileParser);
 app.use(cors());
+app.use(morgan("dev"));
 
-app.get("/", (req, res) => {
-    res.json({ ok: "Hello World" });
-});
-
-app.get("/users", (req, res) => {
-    res.json(users);
-});
+app.use(routes);
 
 export const API = functions.https.onRequest(app);
