@@ -2,9 +2,8 @@ import express from "express";
 import storageService from "../services/storage";
 
 class StorageController {
-    constructor (){}
-
     async saveImage(req: express.Request, res: express.Response){
+        // @ts-ignore
         const files = req.files as any;
         const file = files[0];
 
