@@ -1,6 +1,6 @@
 import express from "express";
 
-class ProductController {
+class ProductsController {
     async products(req: express.Request, res: express.Response){
         res.json({ ok: "products" });
     }
@@ -18,4 +18,4 @@ class ProductController {
     }
 }
 
-export default new ProductController();
+export { ProductsController };

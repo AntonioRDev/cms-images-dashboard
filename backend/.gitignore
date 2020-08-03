@@ -63,3 +63,7 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+#
+/functions/src/config/cloudinary.ts
+/functions/src/config/serviceAccountKey.json

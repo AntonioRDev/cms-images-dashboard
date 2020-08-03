@@ -1,6 +1,9 @@
 import express = require("express");
-import ProductsController from "./controllers/ProductsController";
-import StorageController from "./controllers/StorageController";
+import { ProductsController as ProductsControllerType } from "./controllers/ProductsController";
+import { StorageController as StorageControllerType } from "./controllers/StorageController";
+
+const ProductsController = new ProductsControllerType();
+const StorageController = new StorageControllerType();
 
 const routes = express.Router();
 
