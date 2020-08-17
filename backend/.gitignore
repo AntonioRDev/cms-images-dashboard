@@ -66,5 +66,5 @@ node_modules/
 
 #
 functions/src/config/cloudinary.ts
-functions/src/config/serviceAccountKey.json
+functions/src/config/serviceAccountKey.ts
 /functions/lib

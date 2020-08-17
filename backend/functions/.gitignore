@@ -7,3 +7,4 @@ typings/
 
 node_modules/
 /functions/lib/config
+/functions/src/config
