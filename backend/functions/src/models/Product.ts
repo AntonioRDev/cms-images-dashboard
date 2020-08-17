@@ -1,21 +1,9 @@
-type ProductParams = {
-    id: string;
-    name: string;
-    imageSrc: string;
-}
-
 export default class Product {
-    id: string;
-    name: string;
-    imageSrc: string;
-    createdAt: string;
-    deletedAt: string;
+  createdAt: string;
+  deletedAt: string;
 
-    constructor(params: ProductParams){
-        this.id = params.id;
-        this.name = params.name;
-        this.imageSrc = params.imageSrc;
-        this.createdAt = "";
-        this.deletedAt = "";
-    }
+  constructor(private id: string, private name: string, private imageSrc: string) {
+    this.createdAt = "";
+    this.deletedAt = "";
+  }
 }
