@@ -1,12 +1,16 @@
 import React from "react";
-
-// import { Container } from './styles';
+import { Header, Container, Title } from './styles';
+import ListProducts from "presentation/components/list-products";
 
 const Main: React.FC = () => {
   return (
-    <div>
-      <h1>HELLOU</h1>
-    </div>
+    <Container>
+      <Header />
+      <Title>
+        <h1>Nossos Produtos:</h1>
+      </Title>
+      <ListProducts />
+    </Container>
   );
 };
 
